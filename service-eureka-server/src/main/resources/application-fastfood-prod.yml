@@ -16,7 +16,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://${security.user.name}:${security.user.password}@172.24.226.142:${eureka.instance.port}/eureka/,http://${security.user.name}:${security.user.password}@172.24.226.140:${eureka.instance.port}/eureka/
+      defaultZone: http://${security.user.name}:${security.user.password}@172.24.226.143:${eureka.instance.port}/eureka/,http://${security.user.name}:${security.user.password}@172.24.226.142:${eureka.instance.port}/eureka/,http://${security.user.name}:${security.user.password}@172.24.226.140:${eureka.instance.port}/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 0
     enableSelfPreservation: false
