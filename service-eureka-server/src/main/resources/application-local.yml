@@ -19,3 +19,5 @@ eureka:
       defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 0
+    enableSelfPreservation: false
+    evictionIntervalTimerInMs: 4000

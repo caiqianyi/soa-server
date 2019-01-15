@@ -2,7 +2,7 @@ spring:
   application:
     name: service-registry
   profiles:
-    active: fastfood-prod
+    active: local
 
 # Define the port where the Service Registry server would be running
 server:
