@@ -10,13 +10,13 @@ security:
 # for server discovery
 eureka:
   instance:
-    hostname: localhost
-    port: ${server.port}
+    preferIpAddress: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${security.user.name}:${security.user.password}@${spring.cloud.client.ipAddress}:${server.port}/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 0
     enableSelfPreservation: false
